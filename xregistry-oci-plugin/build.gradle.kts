@@ -9,21 +9,15 @@
 
 plugins {
     base
-    java
     `java-gradle-plugin`
-    `maven-publish`
 }
 
 repositories {
-    // Use Maven Central for resolving dependencies.
-    mavenCentral()
     gradlePluginPortal()
 }
 
 dependencies {
     implementation(gradleApi())
-    implementation("com.fasterxml.jackson.core:jackson-databind:2.20.0")
-    testImplementation("org.assertj:assertj-core:3.27.4")
 }
 
 gradlePlugin {
@@ -31,16 +25,6 @@ gradlePlugin {
         register("xRegistryOCIPackaging") {
             id = "com.metaformsystems.xregistry-oci-packaging"
             implementationClass = "com.metaformsystems.fleet.XRegistryOciPackagingPlugin"
-        }
-    }
-}
-
-testing {
-    suites {
-        // Configure the built-in test suite
-        val test by getting(JvmTestSuite::class) {
-            // Use JUnit Jupiter test framework
-            useJUnitJupiter("5.8.1")
         }
     }
 }
