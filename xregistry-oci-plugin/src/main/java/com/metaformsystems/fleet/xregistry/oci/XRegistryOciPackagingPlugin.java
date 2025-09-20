@@ -13,7 +13,7 @@
  *
  */
 
-package com.metaformsystems.fleet;
+package com.metaformsystems.fleet.xregistry.oci;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.gradle.api.GradleException;
@@ -24,11 +24,11 @@ import org.gradle.api.tasks.Copy;
 import org.gradle.api.tasks.bundling.Tar;
 import org.jspecify.annotations.NonNull;
 
-import static com.metaformsystems.fleet.Constants.GRADLE_TASK_GROUP;
-import static com.metaformsystems.fleet.Constants.PLUGIN_EXTENSION_NAME;
-import static com.metaformsystems.fleet.Constants.PLUGIN_PARAM_ARTIFACT_NAME;
-import static com.metaformsystems.fleet.Constants.PLUGIN_PARAM_ARTIFACT_VERSION;
-import static com.metaformsystems.fleet.Constants.PLUGIN_PARAM_SOURCE_DIR;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.GRADLE_TASK_GROUP;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.PLUGIN_EXTENSION_NAME;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.PLUGIN_PARAM_ARTIFACT_NAME;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.PLUGIN_PARAM_ARTIFACT_VERSION;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.PLUGIN_PARAM_SOURCE_DIR;
 import static java.util.Objects.requireNonNullElseGet;
 
 /**

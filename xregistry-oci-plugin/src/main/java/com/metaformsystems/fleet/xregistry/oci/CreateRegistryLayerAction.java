@@ -12,17 +12,17 @@
  *
  */
 
-package com.metaformsystems.fleet;
+package com.metaformsystems.fleet.xregistry.oci;
 
 import org.gradle.api.Action;
 import org.gradle.api.Project;
 import org.gradle.api.tasks.bundling.Compression;
 import org.gradle.api.tasks.bundling.Tar;
 
-import static com.metaformsystems.fleet.Constants.GRADLE_TASK_GROUP;
-import static com.metaformsystems.fleet.Constants.OCI_LAYERS_DIR;
-import static com.metaformsystems.fleet.Constants.XREGISTRY_LAYER_ARCHIVE;
-import static com.metaformsystems.fleet.Constants.XREGISTRY_STAGING_DIR;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.GRADLE_TASK_GROUP;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.OCI_LAYERS_DIR;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.XREGISTRY_LAYER_ARCHIVE;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.XREGISTRY_STAGING_DIR;
 
 /**
  * Copies files into the xRegistry layer archive.

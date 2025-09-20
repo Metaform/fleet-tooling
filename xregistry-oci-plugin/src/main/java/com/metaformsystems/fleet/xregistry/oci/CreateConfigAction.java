@@ -12,7 +12,7 @@
  *
  */
 
-package com.metaformsystems.fleet;
+package com.metaformsystems.fleet.xregistry.oci;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.gradle.api.Action;
@@ -24,13 +24,13 @@ import java.time.Instant;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import static com.metaformsystems.fleet.Constants.CONFIG_DIGEST_PROPERTY;
-import static com.metaformsystems.fleet.Constants.CONFIG_SIZE_PROPERTY;
-import static com.metaformsystems.fleet.Constants.GRADLE_TASK_GROUP;
-import static com.metaformsystems.fleet.Constants.LAYER_DIGEST_PROPERTY;
-import static com.metaformsystems.fleet.Constants.OCI_CONFIG_PATH;
-import static com.metaformsystems.fleet.Constants.SHA_PREFIX;
-import static com.metaformsystems.fleet.ShaUtils.generateSha256;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.CONFIG_DIGEST_PROPERTY;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.CONFIG_SIZE_PROPERTY;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.GRADLE_TASK_GROUP;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.LAYER_DIGEST_PROPERTY;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.OCI_CONFIG_PATH;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.SHA_PREFIX;
+import static com.metaformsystems.fleet.xregistry.oci.ShaUtils.generateSha256;
 import static java.nio.file.Files.write;
 import static java.util.Collections.emptyMap;
 import static java.util.Collections.singletonList;

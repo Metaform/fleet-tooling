@@ -12,7 +12,7 @@
  *
  */
 
-package com.metaformsystems.fleet;
+package com.metaformsystems.fleet.xregistry.oci;
 
 import org.gradle.api.Project;
 import org.gradle.api.tasks.Copy;
@@ -26,30 +26,30 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 
-import static com.metaformsystems.fleet.Constants.CONFIG_DIGEST_PROPERTY;
-import static com.metaformsystems.fleet.Constants.CONFIG_MEDIA_TYPE;
-import static com.metaformsystems.fleet.Constants.LAYER_DIGEST_PROPERTY;
-import static com.metaformsystems.fleet.Constants.MANIFEST_DIGEST_PROPERTY;
-import static com.metaformsystems.fleet.Constants.OCI_BLOBS_SHA_DIR;
-import static com.metaformsystems.fleet.Constants.OCI_CONFIG;
-import static com.metaformsystems.fleet.Constants.OCI_CONFIG_DIR;
-import static com.metaformsystems.fleet.Constants.OCI_INDEX_FILE;
-import static com.metaformsystems.fleet.Constants.OCI_LAYERS_DIR;
-import static com.metaformsystems.fleet.Constants.OCI_LAYOUT_DIR;
-import static com.metaformsystems.fleet.Constants.OCI_LAYOUT_FILE;
-import static com.metaformsystems.fleet.Constants.OCI_MANIFEST_DIR;
-import static com.metaformsystems.fleet.Constants.OCI_MANIFEST_PATH;
-import static com.metaformsystems.fleet.Constants.OCI_MEDIA_TYPE;
-import static com.metaformsystems.fleet.Constants.PLUGIN_EXTENSION_NAME;
-import static com.metaformsystems.fleet.Constants.PLUGIN_PARAM_ARTIFACT_NAME;
-import static com.metaformsystems.fleet.Constants.PLUGIN_PARAM_ARTIFACT_VERSION;
-import static com.metaformsystems.fleet.Constants.PLUGIN_PARAM_SOURCE_DIR;
-import static com.metaformsystems.fleet.Constants.XREGISTRY_LAYER_ARCHIVE;
-import static com.metaformsystems.fleet.Constants.XREGISTRY_LAYER_ARCHIVE_PATH;
-import static com.metaformsystems.fleet.Constants.XREGISTRY_LAYER_SHA_PATH;
-import static com.metaformsystems.fleet.Constants.XREGISTRY_SOURCE_DIR;
-import static com.metaformsystems.fleet.Constants.XREGISTRY_STAGING_DIR;
-import static com.metaformsystems.fleet.XRegistryOciPackagingPlugin.BUILD_X_REGISTRY_TASK;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.CONFIG_DIGEST_PROPERTY;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.CONFIG_MEDIA_TYPE;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.LAYER_DIGEST_PROPERTY;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.MANIFEST_DIGEST_PROPERTY;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.OCI_BLOBS_SHA_DIR;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.OCI_CONFIG;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.OCI_CONFIG_DIR;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.OCI_INDEX_FILE;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.OCI_LAYERS_DIR;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.OCI_LAYOUT_DIR;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.OCI_LAYOUT_FILE;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.OCI_MANIFEST_DIR;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.OCI_MANIFEST_PATH;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.OCI_MEDIA_TYPE;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.PLUGIN_EXTENSION_NAME;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.PLUGIN_PARAM_ARTIFACT_NAME;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.PLUGIN_PARAM_ARTIFACT_VERSION;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.PLUGIN_PARAM_SOURCE_DIR;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.XREGISTRY_LAYER_ARCHIVE;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.XREGISTRY_LAYER_ARCHIVE_PATH;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.XREGISTRY_LAYER_SHA_PATH;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.XREGISTRY_SOURCE_DIR;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.XREGISTRY_STAGING_DIR;
+import static com.metaformsystems.fleet.xregistry.oci.XRegistryOciPackagingPlugin.BUILD_X_REGISTRY_TASK;
 import static java.nio.file.Files.write;
 import static org.assertj.core.api.Assertions.assertThat;
 

@@ -12,7 +12,7 @@
  *
  */
 
-package com.metaformsystems.fleet;
+package com.metaformsystems.fleet.xregistry.oci;
 
 import org.gradle.api.Action;
 import org.gradle.api.GradleException;
@@ -22,9 +22,9 @@ import org.gradle.api.tasks.Copy;
 
 import java.io.File;
 
-import static com.metaformsystems.fleet.Constants.ARTIFACT_EXTENSIONS;
-import static com.metaformsystems.fleet.Constants.GRADLE_TASK_GROUP;
-import static com.metaformsystems.fleet.Constants.XREGISTRY_STAGING_DIR;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.ARTIFACT_EXTENSIONS;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.GRADLE_TASK_GROUP;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.XREGISTRY_STAGING_DIR;
 
 /**
  * Prepares the xRegistry build layout.

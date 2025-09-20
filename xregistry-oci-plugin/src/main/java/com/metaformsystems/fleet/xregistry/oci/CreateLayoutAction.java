@@ -13,7 +13,7 @@
  *
  */
 
-package com.metaformsystems.fleet;
+package com.metaformsystems.fleet.xregistry.oci;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.gradle.api.Action;
@@ -26,18 +26,18 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
-import static com.metaformsystems.fleet.Constants.CONFIG_DIGEST_PROPERTY;
-import static com.metaformsystems.fleet.Constants.GRADLE_TASK_GROUP;
-import static com.metaformsystems.fleet.Constants.LAYER_DIGEST_PROPERTY;
-import static com.metaformsystems.fleet.Constants.MANIFEST_DIGEST_PROPERTY;
-import static com.metaformsystems.fleet.Constants.OCI_BLOBS_SHA_DIR;
-import static com.metaformsystems.fleet.Constants.OCI_CONFIG_PATH;
-import static com.metaformsystems.fleet.Constants.OCI_INDEX_FILE;
-import static com.metaformsystems.fleet.Constants.OCI_LAYOUT_DIR;
-import static com.metaformsystems.fleet.Constants.OCI_LAYOUT_FILE;
-import static com.metaformsystems.fleet.Constants.OCI_MANIFEST_PATH;
-import static com.metaformsystems.fleet.Constants.SHA_PREFIX;
-import static com.metaformsystems.fleet.Constants.XREGISTRY_LAYER_ARCHIVE_PATH;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.CONFIG_DIGEST_PROPERTY;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.GRADLE_TASK_GROUP;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.LAYER_DIGEST_PROPERTY;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.MANIFEST_DIGEST_PROPERTY;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.OCI_BLOBS_SHA_DIR;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.OCI_CONFIG_PATH;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.OCI_INDEX_FILE;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.OCI_LAYOUT_DIR;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.OCI_LAYOUT_FILE;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.OCI_MANIFEST_PATH;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.SHA_PREFIX;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.XREGISTRY_LAYER_ARCHIVE_PATH;
 import static java.nio.file.Files.copy;
 import static java.nio.file.Files.write;
 import static java.nio.file.StandardCopyOption.REPLACE_EXISTING;

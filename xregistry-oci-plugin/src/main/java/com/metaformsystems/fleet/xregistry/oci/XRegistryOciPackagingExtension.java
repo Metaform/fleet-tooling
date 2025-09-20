@@ -12,14 +12,14 @@
  *
  */
 
-package com.metaformsystems.fleet;
+package com.metaformsystems.fleet.xregistry.oci;
 
 import org.gradle.api.provider.Property;
 import org.jspecify.annotations.NonNull;
 
-import static com.metaformsystems.fleet.Constants.CONFIG_MEDIA_TYPE;
-import static com.metaformsystems.fleet.Constants.OCI_MEDIA_TYPE;
-import static com.metaformsystems.fleet.Constants.XREGISTRY_SOURCE_DIR;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.CONFIG_MEDIA_TYPE;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.OCI_MEDIA_TYPE;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.XREGISTRY_SOURCE_DIR;
 
 /**
  * Gradle extension for the XRegistry OCI packaging plugin.

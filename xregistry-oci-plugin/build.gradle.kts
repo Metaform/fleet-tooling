@@ -24,7 +24,7 @@ gradlePlugin {
     plugins {
         register("xRegistryOCIPackaging") {
             id = "com.metaformsystems.xregistry-oci-packaging"
-            implementationClass = "com.metaformsystems.fleet.XRegistryOciPackagingPlugin"
+            implementationClass = "com.metaformsystems.fleet.xregistry.oci.XRegistryOciPackagingPlugin"
         }
     }
 }

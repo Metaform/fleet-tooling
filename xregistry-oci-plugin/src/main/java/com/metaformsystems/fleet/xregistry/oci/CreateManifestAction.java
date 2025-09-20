@@ -12,7 +12,7 @@
  *
  */
 
-package com.metaformsystems.fleet;
+package com.metaformsystems.fleet.xregistry.oci;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.gradle.api.Action;
@@ -25,17 +25,17 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import static com.metaformsystems.fleet.Constants.CONFIG_DIGEST_PROPERTY;
-import static com.metaformsystems.fleet.Constants.CONFIG_MEDIA_TYPE;
-import static com.metaformsystems.fleet.Constants.CONFIG_SIZE_PROPERTY;
-import static com.metaformsystems.fleet.Constants.GRADLE_TASK_GROUP;
-import static com.metaformsystems.fleet.Constants.LAYER_DIGEST_PROPERTY;
-import static com.metaformsystems.fleet.Constants.LAYER_SIZE_PROPERTY;
-import static com.metaformsystems.fleet.Constants.MANIFEST_DIGEST_PROPERTY;
-import static com.metaformsystems.fleet.Constants.OCI_MANIFEST_PATH;
-import static com.metaformsystems.fleet.Constants.OCI_MEDIA_TYPE;
-import static com.metaformsystems.fleet.Constants.SHA_PREFIX;
-import static com.metaformsystems.fleet.ShaUtils.generateSha256;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.CONFIG_DIGEST_PROPERTY;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.CONFIG_MEDIA_TYPE;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.CONFIG_SIZE_PROPERTY;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.GRADLE_TASK_GROUP;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.LAYER_DIGEST_PROPERTY;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.LAYER_SIZE_PROPERTY;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.MANIFEST_DIGEST_PROPERTY;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.OCI_MANIFEST_PATH;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.OCI_MEDIA_TYPE;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.SHA_PREFIX;
+import static com.metaformsystems.fleet.xregistry.oci.ShaUtils.generateSha256;
 import static java.nio.file.Files.write;
 
 /**

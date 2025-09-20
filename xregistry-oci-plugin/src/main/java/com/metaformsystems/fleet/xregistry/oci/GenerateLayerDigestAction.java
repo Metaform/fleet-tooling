@@ -12,20 +12,20 @@
  *
  */
 
-package com.metaformsystems.fleet;
+package com.metaformsystems.fleet.xregistry.oci;
 
 import org.gradle.api.Action;
 import org.gradle.api.GradleException;
 import org.gradle.api.Project;
 import org.gradle.api.Task;
 
-import static com.metaformsystems.fleet.Constants.GRADLE_TASK_GROUP;
-import static com.metaformsystems.fleet.Constants.LAYER_DIGEST_PROPERTY;
-import static com.metaformsystems.fleet.Constants.LAYER_SIZE_PROPERTY;
-import static com.metaformsystems.fleet.Constants.SHA_PREFIX;
-import static com.metaformsystems.fleet.Constants.XREGISTRY_LAYER_ARCHIVE_PATH;
-import static com.metaformsystems.fleet.Constants.XREGISTRY_LAYER_SHA_PATH;
-import static com.metaformsystems.fleet.ShaUtils.generateSha256;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.GRADLE_TASK_GROUP;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.LAYER_DIGEST_PROPERTY;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.LAYER_SIZE_PROPERTY;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.SHA_PREFIX;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.XREGISTRY_LAYER_ARCHIVE_PATH;
+import static com.metaformsystems.fleet.xregistry.oci.Constants.XREGISTRY_LAYER_SHA_PATH;
+import static com.metaformsystems.fleet.xregistry.oci.ShaUtils.generateSha256;
 import static java.nio.file.Files.write;
 
 /**
