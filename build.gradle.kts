@@ -10,6 +10,7 @@ allprojects {
 
     repositories {
         mavenCentral()
+        mavenLocal()
     }
 }
 
@@ -25,6 +26,7 @@ subprojects {
 
     dependencies {
         implementation("com.fasterxml.jackson.core:jackson-databind:2.20.0")
+        implementation("org.jetbrains:annotations:26.0.2-1")
         testImplementation("org.assertj:assertj-core:3.27.4")
     }
     testing {
