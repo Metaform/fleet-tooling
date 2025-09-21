@@ -1,5 +1,5 @@
 {
-  "policyid": "generic.access-1",
+  "policyid": "generic.access",
   "versionid": "1.0",
   "description" : "Base policy that requires the consumer to be a member of Dataspace-X",
   "policydefinition": {
