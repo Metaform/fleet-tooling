@@ -42,7 +42,6 @@ public class CompactFileSystemWalker extends AbstractFileSystemWalker {
         super(visitor);
     }
 
-
     protected void processPath(ArtifactType type, Path rootPath) {
         var resourcePath = rootPath.resolve(type.resourcesName());
         if (exists(resourcePath)) {
