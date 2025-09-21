@@ -14,12 +14,11 @@
 
 package com.metaformsystems.fleet.xregistry.processor;
 
-import org.jetbrains.annotations.Nullable;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
+import static com.metaformsystems.fleet.xregistry.processor.FileParser.parseFilename;
 import static java.nio.file.Files.exists;
 
 /**
@@ -34,9 +33,6 @@ import static java.nio.file.Files.exists;
  * </ul>
  */
 public class CompactFileSystemWalker extends AbstractFileSystemWalker {
-    private static final int TOKEN_COUNT = 4;  // group, resource name, version, extension
-    private static final int GROUP = 0;
-    private static final int RESOURCE_NAME = 1;
 
     public CompactFileSystemWalker(XRegistryVisitor visitor) {
         super(visitor);
@@ -60,37 +56,6 @@ public class CompactFileSystemWalker extends AbstractFileSystemWalker {
             return;
         }
         processFile(type, artifact, filePath);
-    }
-
-    /**
-     * Parse a filename in the format "group.resource-name.version.extension" and return the artifact.
-     *
-     * @param filename the filename to parse
-     * @return Artifact or null if format is invalid
-     */
-    @Nullable
-    public Artifact parseFilename(String filename) {
-        if (filename == null || filename.isEmpty()) {
-            return null;
-        }
-
-        var tokens = filename.split("\\.");
-        if (tokens.length < TOKEN_COUNT) {
-            return null; // Need at least group.resource.version.extension
-        }
-
-        var group = tokens[GROUP];
-        var resourceName = tokens[RESOURCE_NAME];
-
-        // everything from third token to second-to-last token is the version
-        var version = new StringBuilder();
-        for (var i = 2; i < tokens.length - 1; i++) {
-            if (i > 2) {
-                version.append(".");
-            }
-            version.append(tokens[i]);
-        }
-        return new Artifact(group, resourceName, version.toString());
     }
 
 }
