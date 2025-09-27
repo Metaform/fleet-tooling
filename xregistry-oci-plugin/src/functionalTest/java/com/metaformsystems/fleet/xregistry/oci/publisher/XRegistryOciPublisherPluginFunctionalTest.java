@@ -127,7 +127,7 @@ public class XRegistryOciPublisherPluginFunctionalTest {
                     // Custom manifest annotations
                     manifestAnnotations.set(
                         mapOf(
-                            "org.opencontainers.image.title" to "XRegistry Policy Bundle",
+                            "org.opencontainers.image.title" to "xRegistry Policy Bundle",
                             "org.opencontainers.image.description" to "Fleet management policies",
                             "org.opencontainers.image.version" to project.version.toString(),
                             "org.opencontainers.image.created" to Instant.now().toString(),
