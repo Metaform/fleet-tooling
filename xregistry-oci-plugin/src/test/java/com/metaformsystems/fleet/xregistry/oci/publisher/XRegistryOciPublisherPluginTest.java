@@ -35,10 +35,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class XRegistryOciPublisherPluginTest {
 
-    private Project project;
-
     @TempDir
     Path tempDir;
+
+    private Project project;
 
     @Test
     void testTaskConfiguration() throws IOException {

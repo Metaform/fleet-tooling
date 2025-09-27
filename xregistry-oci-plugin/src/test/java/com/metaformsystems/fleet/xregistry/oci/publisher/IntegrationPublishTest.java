@@ -138,6 +138,4 @@ public class IntegrationPublishTest {
         ociLayoutDir.mkdirs();
         write(new File(ociLayoutDir, "index.json").toPath(), "{}".getBytes());
     }
-
-
 }

@@ -87,7 +87,6 @@ public class XRegistryOciPublisherPluginFunctionalTest {
         assertThat(manifest.getArtifactType().getMediaType()).isEqualTo(XREGISTRY_CONTENT_TYPE);
     }
 
-
     @BeforeEach
     void setup() throws IOException {
         projectDir = tempDir.toFile();
@@ -153,7 +152,6 @@ public class XRegistryOciPublisherPluginFunctionalTest {
         writeString(settingsFile.toPath(), """
                     rootProject.name = "test-project"
                 """);
-
     }
 
 }
