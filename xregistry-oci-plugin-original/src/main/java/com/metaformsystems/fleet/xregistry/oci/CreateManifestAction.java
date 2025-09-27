@@ -61,14 +61,6 @@ public class CreateManifestAction implements Action<Task> {
         this.mapper = mapper;
     }
 
-    // Backward compatibility constructor
-    public CreateManifestAction(Project project, String artifactName, String version, ObjectMapper mapper) {
-        this.project = project;
-        this.artifactNameProvider = project.provider(() -> artifactName);
-        this.versionProvider = project.provider(() -> version);
-        this.mapper = mapper;
-    }
-
     @Override
     public void execute(Task task) {
         task.setDescription(DESCRIPTION);

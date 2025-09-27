@@ -24,6 +24,7 @@ import static com.metaformsystems.fleet.xregistry.oci.Constants.XREGISTRY_SOURCE
 /**
  * Gradle extension for the XRegistry OCI packaging plugin.
  */
+@Deprecated
 public abstract class XRegistryOciPackagingExtension {
 
     public abstract Property<@NonNull String> getXRegistrySourceDir();

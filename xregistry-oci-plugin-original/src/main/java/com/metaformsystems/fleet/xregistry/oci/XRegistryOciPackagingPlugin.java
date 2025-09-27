@@ -34,6 +34,7 @@ import static java.util.Objects.requireNonNullElseGet;
 /**
  * A plugin responsible for creating an OCI-compliant package from xRegistry source files.
  */
+@Deprecated
 public class XRegistryOciPackagingPlugin implements Plugin<@NonNull Project> {
     public static final String BUILD_X_REGISTRY_TASK = "buildXRegistryOci";
 

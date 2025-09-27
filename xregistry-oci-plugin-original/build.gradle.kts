@@ -18,20 +18,30 @@ repositories {
 
 dependencies {
     implementation(gradleApi())
-    implementation("land.oras:oras-java-sdk:0.2.15")
 }
 
 gradlePlugin {
     plugins {
-        register("xRegistryOCIPublisher") {
-            id = "com.metaformsystems.xregistry-oci-publisher"
-            implementationClass = "com.metaformsystems.fleet.xregistry.oci.publisher.XRegistryOciPublisherPlugin"
+        register("xRegistryOCIPackaging") {
+            id = "com.metaformsystems.xregistry-oci-packaging"
+            implementationClass = "com.metaformsystems.fleet.xregistry.oci.XRegistryOciPackagingPlugin"
         }
     }
 }
 
+// Clean up build artifacts
+tasks.clean {
+    delete(
+        layout.buildDirectory.dir("xregistry-staging"),
+        layout.buildDirectory.dir("oci-layers"),
+        layout.buildDirectory.dir("oci-config"),
+        layout.buildDirectory.dir("oci-manifest"),
+        layout.buildDirectory.dir("oci-layout"),
+        layout.buildDirectory.dir("distributions")
+    )
+}
 
-project.defaultTasks("buildXRegistryOciPublish")
+project.defaultTasks("buildXRegistryOci")
 
 publishing {
     publications {
