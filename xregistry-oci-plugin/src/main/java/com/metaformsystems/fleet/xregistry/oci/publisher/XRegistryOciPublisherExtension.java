@@ -32,6 +32,7 @@ import static com.metaformsystems.fleet.xregistry.oci.publisher.Constants.XREGIS
  *
  * configure<XRegistryOciPublisherExtension> {
  *     xRegistrySourceDir.set("src/main/xregistry")
+ *
  *     ociArtifactName.set("ghcr.io/acme/xr-sample")
  *     ociArtifactTag.set("1.0")
  *
