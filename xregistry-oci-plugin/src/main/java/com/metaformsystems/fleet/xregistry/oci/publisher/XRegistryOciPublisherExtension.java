@@ -32,8 +32,8 @@ import static com.metaformsystems.fleet.xregistry.oci.publisher.Constants.XREGIS
  *
  * configure<XRegistryOciPublisherExtension> {
  *     xRegistrySourceDir.set("src/main/xregistry")
- *     ociArtifactName.set("ghcr.io/acme/xr-sample:1.0")
- *     ociArtifactTag.set("1.0.0")
+ *     ociArtifactName.set("ghcr.io/acme/xr-sample")
+ *     ociArtifactTag.set("1.0")
  *
  *     // Registry authentication
  *     ociRegistryUsername.set("user")
