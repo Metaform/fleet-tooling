@@ -43,6 +43,11 @@ import static java.lang.String.format;
 import static java.nio.file.Files.write;
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * Performs an end-to-end integration test of the xRegistry OCI publisher plugin.
+ * <p></p>
+ * Deploys a local <a href="https://zotregistry.dev/">Zot Registry</a> for testing.
+ */
 @Testcontainers
 public class IntegrationPublishTest {
     private static final String ARTIFACT_TEMPLATE = "localhost:%s/metaform/xr-sample";
