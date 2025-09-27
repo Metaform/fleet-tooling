@@ -28,6 +28,7 @@ import org.gradle.api.provider.Provider;
 import static com.metaformsystems.fleet.xregistry.oci.publisher.Constants.DISTRIBUTIONS;
 import static com.metaformsystems.fleet.xregistry.oci.publisher.Constants.GRADLE_TASK_GROUP;
 import static com.metaformsystems.fleet.xregistry.oci.publisher.Constants.XREGISTRY_CONTENT_TYPE;
+import static java.util.Collections.emptyMap;
 
 /**
  * Publishes the packaged OCI artifact to a container registry.
@@ -80,7 +81,7 @@ public class PublishToRegistryAction implements Action<Task> {
             var registry = registryBuilder.build();
 
             // add annotations from plugin configuration
-            var customAnnotations = extension.getManifestAnnotations().getOrElse(java.util.Map.of());
+            var customAnnotations = extension.getManifestAnnotations().getOrElse(emptyMap());
             var annotations = Annotations.ofManifest(customAnnotations);
 
             registry.pushArtifact(ref, type, annotations, path);
