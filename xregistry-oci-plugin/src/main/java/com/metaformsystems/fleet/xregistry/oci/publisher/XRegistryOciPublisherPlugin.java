@@ -42,7 +42,6 @@ public class XRegistryOciPublisherPlugin implements Plugin<@NonNull Project> {
     @Override
     public void apply(Project project) {
         var extension = project.getExtensions().create(PLUGIN_EXTENSION_NAME, XRegistryOciPublisherExtension.class);
-
         // create lazy providers for configuration values
         var sourceLocationProvider = createSourceLocationProvider(project, extension);
         var artifactNameProvider = createArtifactNameProvider(project);
@@ -55,10 +54,17 @@ public class XRegistryOciPublisherPlugin implements Plugin<@NonNull Project> {
         return project.provider(() -> {
             var name = (String) project.getProperties().get(PLUGIN_PARAM_OCI_ARTIFACT_NAME);
             if (name == null) {
+                // Check if the property is present before calling .get()
+                if (!extension.getOciArtifactName().isPresent()) {
+                    throw new GradleException("ociArtifactName must be configured in the xRegistryOciPublisher extension or provided as a project property");
+                }
                 name = extension.getOciArtifactName().get();
             }
             var tag = (String) project.findProperty(PLUGIN_PARAM_OCI_ARTIFACT_TAG);
             if (tag == null) {
+                if (!extension.getOciArtifactTag().isPresent()) {
+                    throw new GradleException("ociArtifactTag must be configured in the xRegistryOciPublisher extension or provided as a project property");
+                }
                 tag = extension.getOciArtifactTag().get();
             }
             return name + ":" + tag;

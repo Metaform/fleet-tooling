@@ -26,7 +26,7 @@ public interface Constants {
 
     String DISTRIBUTIONS = "distributions";
 
-    String PLUGIN_EXTENSION_NAME = "xRegistryOCIPackaging";
+    String PLUGIN_EXTENSION_NAME = "xRegistryOciPublisher";
 
     String XREGISTRY_SOURCE_DIR = "src" + File.separator + "main" + File.separator + "xregistry";
 
