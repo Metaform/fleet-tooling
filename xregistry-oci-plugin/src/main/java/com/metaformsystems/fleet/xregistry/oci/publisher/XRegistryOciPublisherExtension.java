@@ -27,7 +27,7 @@ import static com.metaformsystems.fleet.xregistry.oci.publisher.Constants.XREGIS
  * <pre>
  *
  * plugins {
- *     id("com.metaformsystems.xregistry-oci-packaging")
+ *     id("com.metaformsystems.xregistry-oci-publisher")
  * }
  *
  * configure<XRegistryOciPublisherExtension> {
