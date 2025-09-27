@@ -28,10 +28,6 @@ import static java.nio.file.Files.newInputStream;
  * Base walker implementation.
  */
 public abstract class AbstractFileSystemWalker {
-    private static final int TOKEN_COUNT = 4;  // group, resource name, version, extension
-    private static final int GROUP = 0;
-    private static final int RESOURCE_NAME = 1;
-
     protected final XRegistryVisitor visitor;
 
     public AbstractFileSystemWalker(XRegistryVisitor visitor) {

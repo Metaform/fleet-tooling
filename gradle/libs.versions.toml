@@ -1,0 +1,22 @@
+[versions]
+oras-java-sdk = "0.2.15"
+junit-jupiter = "5.9.2"
+assertj = "3.27.4"
+testcontainers = "1.21.3"
+eclipse-edc = "0.12.0"
+
+[libraries]
+oras-java-sdk = { module = "land.oras:oras-java-sdk", version.ref = "oras-java-sdk" }
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit-jupiter" }
+junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher" }
+assertj-core = { module = "org.assertj:assertj-core", version.ref = "assertj" }
+testcontainers-bom = { module = "org.testcontainers:testcontainers-bom", version.ref = "testcontainers" }
+testcontainers = { module = "org.testcontainers:testcontainers" }
+testcontainers-junit-jupiter = { module = "org.testcontainers:junit-jupiter" }
+eclipse-edc-xregistry-lib = { module = "org.eclipse.edc:xregistry-lib", version.ref = "eclipse-edc" }
+eclipse-edc-xregistry-model = { module = "org.eclipse.edc:xregistry-model", version.ref = "eclipse-edc" }
+
+[bundles]
+testing = ["junit-jupiter", "assertj-core", "junit-platform-launcher"]
+testcontainers = ["testcontainers", "testcontainers-junit-jupiter"]
+eclipse-edc-xregistry = ["eclipse-edc-xregistry-lib", "eclipse-edc-xregistry-model"]
